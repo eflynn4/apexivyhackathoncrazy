@@ -8,7 +8,9 @@ This project analyzes Google review data to identify and correct for systematic 
 
 ## Problem Statement
 
-Online reviews, particularly on platforms like Google, often suffer from voluntary response bias – users with strong opinions (frequently negative) are more likely to contribute. Our initial analysis of the `google_review_ratings.csv` dataset confirmed this, revealing an average user rating significantly below the theoretical neutral midpoint (approx. 2.12 vs. 2.5 on a 1-5 scale, assuming 1 is the minimum allowed rating).
+Online reviews, particularly on platforms like Google, often suffer from voluntary response bias – users with strong opinions (frequently negative) are more likely to contribute. Our initial analysis of the `google_review_ratings.csv` dataset confirmed this, revealing an average user rating significantly below the theoretical neutral midpoint (approx. 2.12 vs. 2.5 on a 0-5 scale).
+
+*   **Note:** While the lowest possible review on Google Maps is one star, this dataset contains average rating values below 1. This lower minimum suggests the data represents ratings on a scale where zero is the effective minimum, or it aggregates ratings in a way that produces averages below 1. We proceeded using 2.5 as the theoretical neutral midpoint of the apparent 0-5 range observed in the user averages.
 
 ## Objective
 
@@ -48,11 +50,11 @@ To develop and apply a statistical method to normalize Google review ratings, co
 
 ## Technologies Used
 
-*   Python 3
+*   Python
 *   Pandas
 *   NumPy
 *   Matplotlib
-*   Jupyter Notebook
+*   Jupyter Notebooks
 
 ## How to Run
 
